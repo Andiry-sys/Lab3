@@ -1,24 +1,19 @@
 let _numb1 = prompt('Enter first number');
 let _numb2 = prompt('Enter second number');
+let n
+let str = ""
+if (_numb1 < _numb2) {
+    n = _numb1
+}
+else {
+    n = _numb2
+}
+for (let i = 2; i <= n; i++) {
+    if (_numb1 % i == 0 && _numb2 % i == 0) {
+        str += i + " "
 
-
-function calc(a, b) {
-    let str = ""
-    while (a != 0 & b != 0) {
-        if (a > b) {
-            a = a % b
-            str += a + " "
-
-        }
-        else {
-            b = b % a
-            str += b + " "
-
-        }
     }
-    alert(str)
 }
 
+alert(str)
 
-
-calc(_numb1, _numb2)
